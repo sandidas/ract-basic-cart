@@ -68,13 +68,11 @@ const Products = () => {
         <div className="col-span-5 md:col-span-4">
           <div className="grid grid-cols-3 md:grid-cols-2 gap-4 mt-5">
             {/* Create a Prodcut component to show individual product and use attribute to send and receive data  */}
-
             {products.map((product) => (
               <Product product={product} key={product.id} addToCartSingleItem={addToCartSingleItem}></Product>
             ))}
           </div>
         </div>
-
         <div className="md:col-span-2">
           {/* Create a Cart component to send/show cart item  */}
           <Cart cart={cart} deleteAllCartItems={deleteAllCartItems}></Cart>
