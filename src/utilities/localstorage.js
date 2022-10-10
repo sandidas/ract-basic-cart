@@ -50,4 +50,6 @@ const deleteStoredAllCartItems = () => {
   localStorage.clear("site-cart");
 };
 
+
+
 export { deleteStoredAllCartItems, cartAddToLocalStorage, cartRemoveItemFromLocalStorage, getStoredCart };

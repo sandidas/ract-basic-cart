@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { cartRemoveItemFromLocalStorage } from "../../utilities/localstorage";
+import { cartRemoveItemFromLocalStorage, deleteStoredAllCartItems } from "../../utilities/localstorage";
 import Cart from "../Cart/Cart";
 import ReviewCart from "../ReviewCart/ReviewCart";
 
@@ -15,6 +15,10 @@ const Orders = () => {
    
 
  }
+ const deleteAllCartItems = () => {
+    deleteStoredAllCartItems();
+    setCart([]);
+  };
 
   return (
     <div>
@@ -24,7 +28,7 @@ const Orders = () => {
             <ReviewCart handleRemoveItem={handleRemoveItem} key={product.id} product={product}></ReviewCart>
           ))}
         </div>
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} deleteAllCartItems={deleteAllCartItems}></Cart>
       </div>
     </div>
   );
