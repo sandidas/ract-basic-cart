@@ -60,7 +60,7 @@ const Products = () => {
     deleteStoredAllCartItems();
     setCart([]);
   };
-  console.log(products);
+
 
   return (
     <div>
@@ -81,5 +81,7 @@ const Products = () => {
     </div>
   );
 };
+
+
 
 export default Products;
