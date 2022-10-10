@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { deleteStoredAllCartItems } from "../../utilities/localstorage";
 
-const Cart = ({ cart, deleteAllCartItems }) => {
+
+const Cart = ({ cart, clearCart }) => {
   //   console.log(cart);
   // ERROR it's comes empty array while card not call
   // 49.3 Same as teacher
@@ -34,7 +34,7 @@ const Cart = ({ cart, deleteAllCartItems }) => {
             <b>Grand Total: {grandTotal.toFixed(2)} </b>
           </p>
           <div className="card-actions justify-end">
-            <button onClick={deleteAllCartItems} className="btn btn-secondary btn-block mt-5">
+            <button onClick={clearCart} className="btn btn-secondary btn-block mt-5">
               Clear Cart
             </button>
             <Link className="btn btn-outline btn-block mt-5" to="../orders">

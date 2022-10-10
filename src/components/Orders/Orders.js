@@ -15,7 +15,7 @@ const Orders = () => {
    
 
  }
- const deleteAllCartItems = () => {
+ const clearCart = () => {
     deleteStoredAllCartItems();
     setCart([]);
   };
@@ -28,7 +28,7 @@ const Orders = () => {
             <ReviewCart handleRemoveItem={handleRemoveItem} key={product.id} product={product}></ReviewCart>
           ))}
         </div>
-        <Cart cart={cart} deleteAllCartItems={deleteAllCartItems}></Cart>
+        <Cart cart={cart} clearCart={clearCart}></Cart>
       </div>
     </div>
   );

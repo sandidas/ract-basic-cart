@@ -55,12 +55,11 @@ const Products = () => {
     }
     // use a dependency. becasue this useEffect depends on products load or not.
   }, [products]);
-  // function to deleted a cart items
-  const deleteAllCartItems = () => {
+  // function to deleted cart items
+  const clearCart = () => {
     deleteStoredAllCartItems();
     setCart([]);
   };
-
 
   return (
     <div>
@@ -75,13 +74,11 @@ const Products = () => {
         </div>
         <div className="md:col-span-2">
           {/* Create a Cart component to send/show cart item  */}
-          <Cart cart={cart} deleteAllCartItems={deleteAllCartItems}></Cart>
+          <Cart cart={cart} clearCart={clearCart}></Cart>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 export default Products;
